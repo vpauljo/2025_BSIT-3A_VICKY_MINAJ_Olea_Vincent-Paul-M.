@@ -1,0 +1,189 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: #f5f8fa;
+  padding: 40px 20px;
+  color: #2c3e50;
+}
+
+/* Invoice Container */
+.invoice-box {
+  max-width: 900px;
+  margin: auto;
+  padding: 40px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  color: #333;
+}
+
+/* Headings and Company Info */
+.company-details h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #2a3f54;
+  margin-bottom: 10px;
+}
+
+.company-details h2 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.company-details p {
+  line-height: 1.6;
+  font-size: 0.95rem;
+  color: #556;
+  margin-bottom: 20px;
+}
+
+/* Client & Invoice Info */
+.client-details {
+  margin-top: 20px;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #2c3e50;
+  background-color: #f7f9fc;
+  padding: 16px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.invoice-box p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 12px 0;
+}
+
+/* Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 30px;
+}
+
+thead {
+  background-color: #f0f4f8;
+}
+
+thead th {
+  text-align: left;
+  padding: 14px;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #2a3f54;
+}
+
+tbody td {
+  padding: 14px;
+  font-size: 0.95rem;
+  color: #34495e;
+  border-bottom: 1px solid #e0e6ed;
+}
+
+.total-row td {
+  font-weight: 700;
+  background-color: #ecf0f1;
+  color: #2c3e50;
+  font-size: 1.05rem;
+}
+
+/* Payment Terms */
+.payment-terms {
+  margin-top: 40px;
+  background-color: #f7f9fc;
+  padding: 20px;
+  border-left: 5px solid #1abc9c;
+  border-radius: 10px;
+}
+
+.payment-terms h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #1a252f;
+}
+
+.payment-terms p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Footer */
+.footer {
+  margin-top: 40px;
+  font-size: 0.95rem;
+  color: #7f8c8d;
+  text-align: center;
+  border-top: 1px solid #e0e6ed;
+  padding-top: 20px;
+}
+
+/* Buttons */
+button {
+  background-color: #1abc9c;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 8px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+  background-color: #16a085;
+  box-shadow: 0 6px 18px rgba(26, 188, 156, 0.2);
+}
+
+a button {
+  background-color: #2ecc71;
+}
+
+a button:hover {
+  background-color: #27ae60;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .invoice-box {
+    padding: 20px;
+  }
+
+  table thead {
+    display: none;
+  }
+
+  table, table tbody, table tr, table td {
+    display: block;
+    width: 100%;
+  }
+
+  table tr {
+    margin-bottom: 15px;
+  }
+
+  table td {
+    text-align: right;
+    padding-left: 50%;
+    position: relative;
+  }
+
+  table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 15px;
+    font-weight: bold;
+    text-align: left;
+  }
+}

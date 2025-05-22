@@ -1,0 +1,124 @@
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: #f0f4f8;
+  color: #2c3e50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Container */
+.container {
+  background-color: #ffffff;
+  padding: 40px 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 480px;
+}
+
+/* Form Title */
+.register-form h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #2c3e50;
+  letter-spacing: 1px;
+}
+
+/* Labels */
+.register-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #34495e;
+}
+
+/* Inputs */
+.register-form input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #ccd6dd;
+  border-radius: 10px;
+  margin-bottom: 22px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.register-form input:focus {
+  border-color: #1abc9c;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(26, 188, 156, 0.15);
+}
+
+/* Buttons */
+.register-form button {
+  width: 100%;
+  padding: 14px;
+  background-color: #1abc9c;
+  color: white;
+  font-weight: 700;
+  font-size: 1rem;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.register-form button:hover {
+  background-color: #16a085;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(26, 188, 156, 0.25);
+}
+
+/* Feedback Messages */
+.register-form p {
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+.register-form p a {
+  color: #1abc9c;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.register-form p a:hover {
+  text-decoration: underline;
+}
+
+/* Login Link */
+.login-link {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .container {
+    padding: 30px 20px;
+  }
+
+  .register-form h2 {
+    font-size: 1.5rem;
+  }
+
+  .register-form button {
+    font-size: 0.95rem;
+  }
+}

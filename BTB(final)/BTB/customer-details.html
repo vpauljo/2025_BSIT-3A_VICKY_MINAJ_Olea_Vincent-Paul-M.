@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Customer Details</title>
+  <link rel="stylesheet" href="customer-details.css" />
+</head>
+<body>
+
+  <div class="container">
+    <h1 id="customerName">Loading...</h1>
+    <p><strong>Company:</strong> <span id="companyName"></span></p>
+    <p><strong>Email:</strong> <span id="email"></span></p>
+    <p><strong>Last Order:</strong> <span id="lastOrder"></span></p>
+    <p><strong>Order Date:</strong> <span id="orderDate"></span></p>
+    <p><strong>Status:</strong> <span id="orderStatus"></span></p>
+    <p><strong>Total Orders:</strong> <span id="totalOrders"></span></p>
+    <p><strong>Total Amount Spent:</strong> <span id="amountSpent"></span></p>
+
+    <a href="customers.html" class="back-btn">← Back to Customers</a>
+    <button onclick="window.print()" class="print-btn">🖨️ Print / Export as PDF</button>
+  </div>
+
+  <script>
+    const customers = {
+      JaneDoe: {
+        name: "Jane Doe",
+        company: "Acme Corp.",
+        email: "jane.doe@acme.com",
+        lastOrder: "20x Industrial Bolts",
+        date: "May 18, 2025",
+        status: "Delivered",
+        totalOrders: 5,
+        amountSpent: "$2,350"
+      },
+      JohnSmith: {
+        name: "John Smith",
+        company: "Builderz Ltd.",
+        email: "john@builderz.com",
+        lastOrder: "50x Steel Pipes",
+        date: "May 15, 2025",
+        status: "Shipped",
+        totalOrders: 3,
+        amountSpent: "$4,120"
+      }
+    };
+
+    function getQueryParam(param) {
+      const params = new URLSearchParams(window.location.search);
+      return params.get(param);
+    }
+
+    function displayCustomer() {
+      const key = getQueryParam("customer");
+      const customer = customers[key];
+
+      if (!customer) {
+        document.querySelector(".container").innerHTML = "<h2>Customer not found</h2><a href='customers.html'>Back</a>";
+        return;
+      }
+
+      document.getElementById("customerName").innerText = customer.name;
+      document.getElementById("companyName").innerText = customer.company;
+      document.getElementById("email").innerText = customer.email;
+      document.getElementById("lastOrder").innerText = customer.lastOrder;
+      document.getElementById("orderDate").innerText = customer.date;
+      document.getElementById("orderStatus").innerText = customer.status;
+      document.getElementById("totalOrders").innerText = customer.totalOrders;
+      document.getElementById("amountSpent").innerText = customer.amountSpent;
+    }
+
+    displayCustomer();
+  </script>
+
+</body>
+</html>
